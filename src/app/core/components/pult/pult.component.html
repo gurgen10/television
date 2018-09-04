@@ -1,0 +1,20 @@
+<div class="pult">
+  <div class="pult-border">
+    <ul class="pult-buttons">
+      <li class="button-item" ><button (click)="turnOffTv()" [ngClass]="{'tv-on' : isOn}">ON/OF</button></li>
+      <li class="button-item">
+          <span>Volume</span>
+          <button (click)="changeVolume($event)">+</button>
+          <button  (click)="changeVolume($event)">-</button>
+      </li>
+      <li class="button-item">
+        <ul class="sub-pult-buttons">
+          <li class="subbutton-item" *ngFor="let button of buttons; let i = index" >
+            <button (click)="getChanalId(i)">{{button}}</button>
+          </li>
+        </ul>
+    </li>
+    </ul>
+
+  </div>
+</div>

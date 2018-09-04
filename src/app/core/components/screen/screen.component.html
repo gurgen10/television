@@ -1,0 +1,14 @@
+<div class="television">
+  <div class="volume" *ngIf="isVolume">Volume {{volume}}</div>
+  <div class="screen" *ngIf="isTvOnInfo; else elseBlock">
+    <img src="./assets/images/{{chanal.src}}" alt="{{chanal.alt}}"/>
+  </div>
+  <ng-template #elseBlock>
+    <div class="screen"></div>
+  </ng-template>
+  
+  <div class="screen-menu" [ngClass]="{'onTV':isTvOn}">
+    <div class="screen-on-of">Power</div>
+    <div class="screen-on-of-light" [ngClass]="{'onTv' : isTvOnInfo}"></div>
+  </div>
+</div>
