@@ -1,7 +1,11 @@
 <div class="television">
   <div class="volume" *ngIf="isVolume">Volume {{volume}}</div>
   <div class="screen" *ngIf="isTvOnInfo; else elseBlock">
-    <img src="./assets/images/{{chanal.src}}" alt="{{chanal.alt}}"/>
+    <!-- <img src="./assets/images/{{chanal.src}}" alt="{{chanal.alt}}"/> -->
+    <video controls autoplay
+      poster="./assets/images/{{poster}}}">
+      <source src="./assets/videos/{{chanal.src}}" type="video/mp4">
+    </video>
   </div>
   <ng-template #elseBlock>
     <div class="screen"></div>
